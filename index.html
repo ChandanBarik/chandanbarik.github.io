@@ -16,6 +16,13 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+      integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Chandan Kumar Barik</title>
   </head>
@@ -318,6 +325,37 @@
         </div>
       </div>
 
+      <div id="work" class="collapse">
+        <div class="card card-body bg-warning text-white py-5">
+          <h2>My Work</h2>
+          <p class="lead">Find some of my work.</p>
+        </div>
+
+        <div class="card card-body py-5">
+          <!-- <h3></h3> -->
+          <!-- <p></p> -->
+          <div class="row no-gutters">
+            <div class="col-md-3">
+              <a href="images/portfolio_web.PNG" data-bs-toggle="lightbox">
+                <img src="images/portfolio_web.PNG" alt="" class="img-fluid" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a
+                href="https://unsplash.it/1200/768.jpg?image=258"
+                data-bs-toggle="lightbox"
+              >
+                <img
+                  src="https://unsplash.it/600.jpg?image=258"
+                  alt=""
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <footer id="main-footer" class="p-5 bg-dark text-white">
         <div class="row">
           <div class="col-md-6">
@@ -347,10 +385,22 @@
       integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+      integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script>
       $(".portfolio-item").click(function () {
         $(".collapse").collapse("hide");
+      });
+
+      $(document).on("click", '[data-bs-toggle="lightbox"]', function (e) {
+        e.preventDefault();
+        console.log("HERE");
+        // $(this).ekkoLightbox();
       });
       // to get the current year for copyright
       $("#year").text(new Date().getFullYear());
